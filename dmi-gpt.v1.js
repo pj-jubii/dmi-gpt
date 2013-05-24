@@ -1,4 +1,3 @@
-  
 var googletag = googletag || {}; googletag.cmd = googletag.cmd || [];
 
 (function() {
@@ -10,7 +9,6 @@ var googletag = googletag || {}; googletag.cmd = googletag.cmd || [];
 	var node = document.getElementsByTagName('script')[0];
 	node.parentNode.insertBefore(gads, node);
 })();
-
 
 var n_pbt = '';
 function nuggAdReady(pbt) {
@@ -84,8 +82,6 @@ function gptFindPageUnit(path) {
 
 	return { 'au': au, 'kv': kv };
 }
-
-
 		
 googletag.cmd.push(function () {
 	var pageUnit = gptFindPageUnit(document.location.pathname);
@@ -100,4 +96,3 @@ googletag.cmd.push(function () {
 googletag.cmd.push(function () { googletag.display('gpt-930x180-atf-top1'); });
 googletag.cmd.push(function () { googletag.display('gpt-160x600-atf-right1'); });
 googletag.cmd.push(function () { googletag.display('gpt-1x1-oop'); });
-	
