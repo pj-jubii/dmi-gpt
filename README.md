@@ -7,6 +7,7 @@ Examples
 --------
 
 [example: small](http://htmlpreview.github.io/?https://github.com/Jubii/dmi-gpt/blob/master/example-small.html)
+
 [example: full](http://htmlpreview.github.io/?https://github.com/Jubii/dmi-gpt/blob/master/example-full.html)
 
 
