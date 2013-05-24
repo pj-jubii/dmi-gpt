@@ -1,4 +1,4 @@
-dmi-gpt
+DMI GPT implementation
 =======
 
-GPT (Google Publisher Tags) for dmi.dk
+This repository shows examples for implementing GPT (Google Publisher Tags) on dmi.dk.
