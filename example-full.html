@@ -1,49 +1,58 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <style>
-  		html,body{background-color:#d9d9d9;margin:0;padding:0;}
-			#page-container{width:1133px;margin:0 auto;}
-			#topad-wrapper{width:960px;text-align:center;}
-			#rightad-wrapper{float:right;width:160px;}
-			#content-container{overflow:hidden;}
-			#page-content{float:left;width:960px; background-color:#fff;box-shadow: 0 0 7px rgba(0,0,0,0.15);}
+	<head>
+		<style>
+		html,body{background-color:#d9d9d9;margin:0;padding:0;}
+		#page-container{width:1133px;margin:0 auto;}
+		#topad-wrapper{width:960px;text-align:center;}
+		#rightad-wrapper{float:right;width:160px;}
+		#content-container{overflow:hidden;}
+		#page-content{float:left;width:960px; background-color:#fff;box-shadow: 0 0 7px rgba(0,0,0,0.15);}
 		</style>
-    </head>
+	</head>
 
-    <body>
+	<body>
 
 		<!-- dmi.dk out-of-page --><div style="position:absolute;top:0;left:0;"><div id="gpt-1x1-oop"></div></div><!-- /dmi.dk out-of-page -->
-
-        <div id="page-container">
-
+	
+	        <div id="page-container">
+	
 			<div id="topad-wrapper">
-
 				<!-- dmi.dk 930x180 --><div id="gpt-930x180-atf-top1"></div><!-- /dmi.dk 930x180 -->
-
-            </div>
-
-            <div id="content-container">
-                <div id="page-content">
-                    <div style="padding:5px;">
+			</div>
+	
+			<div id="content-container">
+				<div id="page-content">
+					<div style="padding:5px;">
 						<h3>Sommerlige temperaturer, men ikke stabilt</h3>
 						<h4>Vejrudsigten for hele landet</h4>
-						<p>Onsdag den 15. maj 2013.</p>
-						<p>Udsigt, der gælder til torsdag aften, udsendt kl. 14.35</p>
+						<p>Onsdag den 37. oktember 4091.</p>
+						<p>Udsigt, der gælder til juleaften, udsendt kl. 47.03</p>
 						<p>I aften og i nat får den vestlige del af landet mest skyet vejr og en overgang kommer der ret udbredt regn, som stedvis kan blive med torden og kraftig regn. I resten af landet mest tørt og i aften fortsat nogen eller en del sol. Vinden bliver let til frisk, stedvis hård fra sydøst og øst, men aftager senere i den vestlige del og bliver svag skiftende. Temp. i nat ned mellem 8 og 13 grader. Torsdag får den østlige de af landet mest tørt vejr med nogen eller en del sol, i resten af landet mere skyet og især først på dagen byger hist og her. Temp. op mellem 15 og 20 grader, i de østlige egne stedvis op til 23 grader. Svag til frisk vind mellem nord og øst, ved Østersøen fra sidst på dagen op til hård østlig vind.</p>
 					</div>
 				</div>
-
-                <div id="rightad-wrapper">
+	
+				<div id="rightad-wrapper">
 					<!-- dmi.dk 160x600 --><div id="gpt-160x600-atf-right1"></div><!-- /dmi.dk 160x600 -->
-                </div>
-            </div>
-        </div>
-
+				</div>
+			</div>
+	        </div>
+	
 		<script type="text/javascript" id="gpt-install">
-		
+			
 		var googletag = googletag || {}; googletag.cmd = googletag.cmd || [];
-
+		
+		(function() {
+			var gads = document.createElement('script');
+			gads.async = true;
+			gads.type = 'text/javascript';
+			var useSSL = 'https:' == document.location.protocol;
+			gads.src = (useSSL ? 'https:' : 'http:') + '//www.googletagservices.com/tag/js/gpt.js';
+			var node = document.getElementsByTagName('script')[0];
+			node.parentNode.insertBefore(gads, node);
+		})();
+	
+	
 		var n_pbt = '';
 		function nuggAdReady(pbt) {
 			var d = new Date();d.setFullYear(d.getFullYear() + 1);
@@ -54,22 +63,22 @@
 			a.async = true; a.type = 'text/javascript'; a.src =(s?'https://jubdk-s':'http://jubdk')+'.nuggad.net/rc?nuggn=224986932&nuggsid=1289003088&nuggrid=' + r;
 			b.parentNode.insertBefore(a, b);
 		})(encodeURIComponent(top.location.href) || 0, 'https:' == document.location.protocol);
-
+	
 		googletag.cmd.push(function() {
 			var x = /(?:\?|&)jubiitest=([^&#]*)/g, m, v = [], d = function (s) {return decodeURIComponent(s.replace(/\+/g, ' '));}; while (m = x.exec(location.search)) { v[v.length] = d(m[1]); }
 			if(v.length>0){ googletag.pubads().setTargeting('jubiitest',v); }
-
+	
 			var pbt=null,cakes=document.cookie.split('; '),c=cakes.length,n='__npbt=';
 			while(c--){ var cake=cakes[c]; if(cake.indexOf(n)===0&&cake.length){pbt=cake.substring(n.length).split('|'); n_pbt=pbt.join(';');break;}}
 			if(pbt!=null){ c=pbt.length; while(c--){var kv=pbt[c].split('='); if(kv.length==2){googletag.pubads().setTargeting(kv[0],kv[1]);} } }
 		});
-
+	
 		function gptFindPageUnit(path) {
 			var prefix = '^/(?:en/)?';
 			var suffix = '/?$';
 			var tilLands = 'vejr/til\\-lands/';
 			var region = tilLands + 'regionaludsigten/';
-
+	
 			var units = [
 				{ p: 'vejr' + suffix, u: '/vejr' },	
 				{ p: 'faeroeerne/vejret/byvejr/by/vis/([^/?#]+)/(\\d+)(?:/.*)?$', u: '/faeroeerne', r: { 1: 'dmi-country', 2: 'dmi-city' } },
@@ -88,18 +97,18 @@
 				{ p: 'groenland(/.*)?$', u: '/groenland' },
 				{ p: 'faeroeerne(/.*)?$', u: '/faeroeerne' }
 			];
-
+	
 			var au = 'dmi.dk';
 			var kv = [];
-
+	
 			for (var i = 0; i < units.length; i++) {
 				var u = units[i];
 				var exp = new RegExp(prefix + u.p, 'i');
-
+	
 				if (exp.test(path)) 
 				{
 					au += u.u;
-
+	
 					if(typeof(u.r) !== 'undefined')
 					{
 						var ms = path.match(exp);
@@ -109,13 +118,13 @@
 							kv[u.r[x]] = ms[x];
 						};
 					}
-
+	
 					break;
 				}
 			}
-
+	
 			return { 'au': au, 'kv': kv };
-		}		
+		}
 		
 		googletag.cmd.push(function () {
 			var pageUnit = gptFindPageUnit(document.location.pathname);
@@ -126,21 +135,12 @@
 			googletag.pubads().collapseEmptyDivs();
 			googletag.enableServices();
 		});
-
+	
 		googletag.cmd.push(function () { googletag.display('gpt-930x180-atf-top1'); });
 		googletag.cmd.push(function () { googletag.display('gpt-160x600-atf-right1'); });
 		googletag.cmd.push(function () { googletag.display('gpt-1x1-oop'); });
-		
-		(function() {
-			var gads = document.createElement('script');
-			gads.async = true;
-			gads.type = 'text/javascript';
-			var useSSL = 'https:' == document.location.protocol;
-			gads.src = (useSSL ? 'https:' : 'http:') + '//www.googletagservices.com/tag/js/gpt.js';
-			var node = document.getElementsByTagName('script')[0];
-			node.parentNode.insertBefore(gads, node);
-		})();
+			
+	
 		</script>
-
-    </body>
+	</body>
 </html>
