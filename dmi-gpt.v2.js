@@ -72,7 +72,7 @@ function gptFindPageUnit(path) {
 				for (x in u.r) 
 				{
 					if(typeof(ms[x]) === 'undefined') continue;
-					kv[kv.length] = { 'k':u.r[x]], 'v':ms[x]};
+					kv[kv.length] = { 'k':u.r[x], 'v':ms[x]};
 				};
 			}
 
