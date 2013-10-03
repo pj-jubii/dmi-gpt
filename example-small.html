@@ -3,11 +3,15 @@
   <head>
 		<style>
 		html,body{background-color:#d9d9d9;margin:0;padding:0;}
-		#page-container{width:1133px;margin:0 auto;}
+		#page-container{width:960px;margin:0 auto;position:relative;}
 		#topad-wrapper{width:960px;text-align:center;}
-		#rightad-wrapper{float:right;width:160px;}
+		.floating-ad-wrapper{position:absolute;top:200px;width:160px;}
+		#leftad-wrapper{left:-170px;}
+		#rightad-wrapper{right:-170px;}
 		#content-container{overflow:hidden;}
 		#page-content{float:left;width:960px; background-color:#fff;box-shadow: 0 0 7px rgba(0,0,0,0.15);}
+		.ad-fill{background-image:url('http://placekitten.com/75/75');}
+		.floating-ad-wrapper .ad-fill{min-height:600px;min-width:160px;}
 		</style>
 	</head>
 
@@ -15,9 +19,9 @@
 
 		<!-- dmi.dk out-of-page --><div style="position:absolute;top:0;left:0;"><div id="gpt-1x1-oop"></div></div><!-- /dmi.dk out-of-page -->
 	
-	  <div id="page-container">
+		<div id="page-container">
 			<div id="topad-wrapper">
-				<!-- dmi.dk 930x180 --><div id="gpt-930x180-atf-top1" style="height:180px;"></div><!-- /dmi.dk 930x180 -->
+				<!-- dmi.dk 930x180 --><div id="gpt-930x180-atf-top1" class="ad-fill" style="height:180px;margin:10px auto;"></div><!-- /dmi.dk 930x180 -->
 			</div>
 	
 			<div id="content-container">
@@ -30,13 +34,17 @@
 						<p>I aften og i nat får den vestlige del af landet mest skyet vejr og en overgang kommer der ret udbredt regn, som stedvis kan blive med torden og kraftig regn. I resten af landet mest tørt og i aften fortsat nogen eller en del sol. Vinden bliver let til frisk, stedvis hård fra sydøst og øst, men aftager senere i den vestlige del og bliver svag skiftende. Temp. i nat ned mellem 8 og 13 grader. Torsdag får den østlige de af landet mest tørt vejr med nogen eller en del sol, i resten af landet mere skyet og især først på dagen byger hist og her. Temp. op mellem 15 og 20 grader, i de østlige egne stedvis op til 23 grader. Svag til frisk vind mellem nord og øst, ved Østersøen fra sidst på dagen op til hård østlig vind.</p>
 					</div>
 				</div>
-	
-				<div id="rightad-wrapper">
-					<!-- dmi.dk 160x600 --><div id="gpt-160x600-atf-right1"></div><!-- /dmi.dk 160x600 -->
+
+				<div id="leftad-wrapper" class="floating-ad-wrapper">
+					<!-- dmi.dk 160x600 --><div id="gpt-160x600-atf-left1" class="ad-fill"></div><!-- /dmi.dk 160x600 -->
+				</div>
+				
+				<div id="rightad-wrapper" class="floating-ad-wrapper">
+					<!-- dmi.dk 160x600 --><div id="gpt-160x600-atf-right1" class="ad-fill"></div><!-- /dmi.dk 160x600 -->
 				</div>
 			</div>
-    </div>
+		</div>
 	
-		<script type="text/javascript" src="dmi-gpt.v2.min.js"></script>
+		<script type="text/javascript" src="dmi-gpt.v3.min.js"></script>
 	</body>
 </html>
