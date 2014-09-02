@@ -38,9 +38,9 @@ function gptFindPageUnit(path) {
 
 	var units = [
 		{ p: 'vejr' + suffix, u: '/vejr' },	
-		{ p: 'faeroeerne/vejret/byvejr/by/vis/([^/?#]+)/(\\d+)(?:/.*)?$', u: '/faeroeerne', r: { 1: 'dmi-country', 2: 'dmi-city' } },
-		{ p: 'groenland/vejret/byvejr/by/vis/([^/?#]+)/(\\d+)(?:/.*)?$', u: '/groenland', r: { 1: 'dmi-country', 2: 'dmi-city' } },
-		{ p: tilLands + 'byvejr/by/vis/([^/?#]+)/(\\d+)(?:/.*)?$', u: '/vejr/byvejr', r: { 1: 'dmi-country', 2: 'dmi-city' } },
+		{ p: 'faeroeerne/vejret/byvejr/by/vis/([^/?#]+)/(\\d+)(?:/.*)?$', u: '/faeroeerne', r: { 1: 'dmi_country', 2: 'dmi_city' } },
+		{ p: 'groenland/vejret/byvejr/by/vis/([^/?#]+)/(\\d+)(?:/.*)?$', u: '/groenland', r: { 1: 'dmi_country', 2: 'dmi_city' } },
+		{ p: tilLands + 'byvejr/by/vis/([^/?#]+)/(\\d+)(?:/.*)?$', u: '/vejr/byvejr', r: { 1: 'dmi_country', 2: 'dmi_city' } },
 		{ p: tilLands + 'skivejr' + suffix, u: '/vejr/skivejr' },
 		{ p: region + 'nordjylland' + suffix, u: '/vejr/region/nordjylland' },
 		{ p: region + 'mvjylland' + suffix, u: '/vejr/region/midtvestjylland' },
@@ -87,7 +87,7 @@ googletag.cmd.push(function () {
 	var pageUnit = gptFindPageUnit(document.location.pathname);
 	for (var i = 0; i < pageUnit.kv.length; i++) {var kv = pageUnit.kv[i];googletag.pubads().setTargeting(kv.k, kv.v);}
 	googletag.defineSlot('/7733/' + pageUnit.au + '/930x180_atf_top1', [930, 180], 'gpt-930x180-atf-top1').addService(googletag.pubads()).setTargeting('fold','atf').setTargeting('position','top1');
-	googletag.defineSlot('/7733/' + pageUnit.au + '/160x600_atf_left1', [160, 600], 'gpt-160x600-atf-left1').addService(googletag.pubads()).setTargeting('fold','atf').setTargeting('position','left1');
+	googletag.defineSlot('/7733/' + pageUnit.au + '/160x600_btf_right2', [160, 600], 'gpt-160x600-btf-right2').addService(googletag.pubads()).setTargeting('fold','btf').setTargeting('position','right2');
 	googletag.defineSlot('/7733/' + pageUnit.au + '/160x600_atf_right1', [160, 600], 'gpt-160x600-atf-right1').addService(googletag.pubads()).setTargeting('fold','atf').setTargeting('position','right1');
 	googletag.defineOutOfPageSlot('/7733/' + pageUnit.au + '/1x1_outofpage1', 'gpt-1x1-oop').addService(googletag.pubads()).setTargeting('position', 'outofpage1');
 	googletag.pubads().collapseEmptyDivs();
@@ -97,7 +97,7 @@ googletag.cmd.push(function () {
 googletag.cmd.push(function () { 
 	googletag.display('gpt-1x1-oop'); 
 	googletag.display('gpt-930x180-atf-top1');
-	googletag.display('gpt-160x600-atf-left1');
+	googletag.display('gpt-160x600-btf-right2');
 	googletag.display('gpt-160x600-atf-right1');
 });
 
